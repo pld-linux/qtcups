@@ -1,0 +1,5 @@
+[Desktop Entry]
+Name=QTCups
+Exec=qtcups
+Terminal=0
+Type=Application
