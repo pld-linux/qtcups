@@ -1,0 +1,20 @@
+--- qtcups-2.0/qtcups/qppdoptionitem.cpp.foo	Tue Mar 19 16:54:01 2002
++++ qtcups-2.0/qtcups/qppdoptionitem.cpp	Tue Mar 19 16:58:24 2002
+@@ -13,7 +13,7 @@
+ 	type_ = Regular;
+ 	option_ = option;
+ 	const char	**xpm = getOptionXPMString(option_->keyword);
+-	setPixmap(0,(xpm ? QPixmap(xpm) : QPixmap(list)));
++	setPixmap(0,(xpm ? QPixmap(xpm) : QPixmap(listicon)));
+ 	currentchoice_ = 0;
+ 	changeable_ = changeable;
+         ppd_choice_t	*defchoice_(0);
+--- qtcups-2.0/qtcups/list.xpm.foo	Tue Mar 19 16:57:58 2002
++++ qtcups-2.0/qtcups/list.xpm	Tue Mar 19 16:58:06 2002
+@@ -1,5 +1,5 @@
+ /* XPM */
+-static const char*list[]={
++static const char*listicon[]={
+ "16 16 7 1",
+ ". c None",
+ "c c #a0a0a0",
