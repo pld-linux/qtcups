@@ -6,7 +6,7 @@ Version:	2.0
 Release:	2
 License:	GPL
 Group:		X11/Applications
-Source0:	http://prdownloads.sourceforge.net/projects/cups/%{name}-%{version}.tar.gz
+Source0:	http://dl.sourceforge.net/cups/%{name}-%{version}.tar.gz
 Source1:	%{name}.desktop
 Source2:	%{name}.png
 Patch0:		%{name}-gcc296.patch
@@ -18,7 +18,6 @@ Requires:	cups >= 1.1.3
 BuildRequires:	qt-devel >= 3.0.5
 BuildRequires:	cups-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-
 
 %description
 QtCups provides CUPS support for Qt applications. It includes:
