@@ -1,5 +1,11 @@
 [Desktop Entry]
 Name=QTCups
+Name[pl]=QTCups
+Comment=
+Comment[pl]=
+Icon=qtcups.png
 Exec=qtcups
 Terminal=0
 Type=Application
+
+# vi: encoding=utf-8
