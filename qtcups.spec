@@ -1,14 +1,21 @@
 Summary:	QtCUPS - a CUPS interface and library for Qt
 Summary(pl):	QtCUPS - interfejs do CUPS i biblioteka dla Qt
+Summary(pt_BR):	Cliente lpr grafico para desktops
 Name:		qtcups
 Version:	2.0
-Release:	1
+Release:	2
 License:	GPL
 Group:		X11/Applications
-Source0:	http://prdownloads.sourceforge.net/cups/%{name}-%{version}.tar.gz
-URL:		http://sourceforge.net/projects/cups
+Source0:	http://prdownloads.sourceforge.net/projects/cups/%{name}-%{version}.tar.gz
+Source1:	%{name}.desktop
+Source2:	%{name}.png
+Patch0:		%{name}-gcc296.patch
+Patch1:		%{name}-qt3.patch
+Patch2:		%{name}-plugin.patch
+Patch3:		%{name}-noi18n.patch
+URL:		http://sourceforge.net/projects/cups/
 Requires:	cups >= 1.1.3
-BuildRequires:	qt-devel >= 2.1
+BuildRequires:	qt-devel >= 3.0.5
 BuildRequires:	cups-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -34,32 +41,50 @@ QtCups dostarcza obs³ugê CUPS dla aplikacji Qt. Zawiera:
   QPrinter, wiêc potrzebne zmiany w kodzie s± niewielkie w wiêkszo¶ci
   programów.
 
+%description -l pt_BR
+Uma interface gráfica baseada no QT para ser usada no lugar do lpr.
+
 %package devel
 Summary:	QtCUPS development files
 Summary(pl):	Pliki dla programistów QtCUPS
+Summary(pt_BR):	Fornece aplicações para Qt com suporte ao CUPS
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}
 
 %description devel
-QtCUPS development files.
+A development library which enables Qt application to print to CUPS
+and configure all CUPS printer options. The class QCupsPrinter
+provides the same interface as QPrinter, so code changes are small
+for most applications.
 
-%description devel -l pl
-Pliki dla programistów QtCUPS.
+%description devel -l pt_BR
+Bibliotecas de desenvolvimento que permite as aplicações baseadas no Qt
+imprimir pelo CUPS e configurar todas as opções das impressoras do CUPS.
 
 %prep
 %setup -q
+%patch0 -p1
+%patch1 -p1
+%patch2 -p1
+%patch3 -p1
 
 %build
 ./configure \
 	--prefix=%{_prefix} \
 	--with-install-root=$RPM_BUILD_ROOT \
-	--enable-qt2 \
+	--enable-qt3 \
 	--with-qt-libraries=%{_libdir}
 %{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
-%{__make} prefix=$RPM_BUILD_ROOT%{_prefix} install
+install -d $RPM_BUILD_ROOT{%{_applnkdir}/System,%{_pixmapsdir}}
+
+%{__make} install \
+	prefix=$RPM_BUILD_ROOT%{_prefix}
+
+install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/System/
+install %{SOURCE2} $RPM_BUILD_ROOT%{_pixmapsdir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -68,7 +93,11 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/qtcups
 %attr(755,root,root) %{_libdir}/*
+%{_datadir}/qtcups/qtcups.*.qm
+%{_applnkdir}/System/*.desktop
+%{_pixmapsdir}/*.png
 
 %files devel
 %defattr(644,root,root,755)
-%{_includedir}/qtcups
+%dir %{_includedir}/qtcups
+%{_includedir}/qtcups/*.h
