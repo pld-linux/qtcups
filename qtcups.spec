@@ -5,8 +5,6 @@ Version:	1.1
 Release:	2
 License:	GPL
 Group:		X11/Applications
-Group(de):	X11/Applikationen
-Group(pl):	X11/Aplikacje
 Source0:	http://download.sourcefoge.net/cups/%{name}-%{version}.tar.gz
 URL:		http://sourceforge.net/projects/cups
 Requires:	cups >= 1.1.3
@@ -40,13 +38,6 @@ QtCups dostarcza obsЁugЙ CUPS dla aplikacji Qt. Zawiera:
 Summary:	QtCUPS development files
 Summary(pl):	Pliki dla programistСw QtCUPS
 Group:		X11/Development/Libraries
-Group(de):	X11/Entwicklung/Libraries
-Group(es):	X11/Desarrollo/Bibliotecas
-Group(fr):	X11/Development/Librairies
-Group(pl):	X11/Programowanie/Biblioteki
-Group(pt_BR):	X11/Desenvolvimento/Bibliotecas
-Group(ru):	X11/Разработка/Библиотеки
-Group(uk):	X11/Розробка/Б╕бл╕отеки
 Requires:	%{name} = %{version}
 
 %description devel
