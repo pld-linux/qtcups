@@ -7,6 +7,7 @@ Release:	2
 License:	GPL
 Group:		X11/Applications
 Source0:	http://dl.sourceforge.net/cups/%{name}-%{version}.tar.gz
+# Source0-md5:	5c3a82d374a3073c0761b8c45519782e
 Source1:	%{name}.desktop
 Source2:	%{name}.png
 Patch0:		%{name}-gcc296.patch
