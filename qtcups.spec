@@ -56,6 +56,12 @@ and configure all CUPS printer options. The class QCupsPrinter
 provides the same interface as QPrinter, so code changes are small
 for most applications.
 
+%description devel -l pl
+Biblioteka umo¿liwiaj±ca aplikacji Qt drukowanie poprzez CUPS oraz
+konfigurowania opcji drukarek CUPS. Klasa QCupsPrinter udostêpnia ten
+sam interfejs co QPrinter, wiêc niezbêdne zmiany w kodzie wiêkszo¶ci
+aplikacji s± niewielkie.
+
 %description devel -l pt_BR
 Bibliotecas de desenvolvimento que permite as aplicações baseadas no Qt
 imprimir pelo CUPS e configurar todas as opções das impressoras do CUPS.
