@@ -3,7 +3,7 @@
 Summary:	QtCUPS - a CUPS interface and library for Qt
 Name:		qtcups
 Version:	1.1
-Release:	1
+Release:	2
 Group:		X11/KDE/System
 Copyright:	GPL
 Source:		http://download.sourcefoge.net/cups/%{name}-%{version}.tar.gz
@@ -27,6 +27,7 @@ Summary:	QtCUPS development files
 Group:		X11/Development/Libraries
 Group(de):	X11/Entwicklung/Libraries
 Group(pl):	X11/Programowanie/Biblioteki
+Requires:	%{name} = %{version}
 
 %description devel
 QtCUPS development files
