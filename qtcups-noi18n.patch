@@ -1,0 +1,12 @@
+--- qtcups-2.0/qtcups/qtcups.cpp.orig	Mon Feb 12 15:39:35 2001
++++ qtcups-2.0/qtcups/qtcups.cpp	Mon Feb 12 15:39:59 2001
+@@ -33,7 +33,8 @@
+ {
+ 	QString	l = getenv("LANG");
+ 	if (l.isEmpty()) l = getenv("LC_ALL");
+-	return l;
++	// return l;
++	return QString("");
+ }
+ 
+ void QtCUPS::setLocale(const QString& _lang)
