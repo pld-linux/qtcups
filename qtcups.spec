@@ -11,6 +11,7 @@ Source0:	http://download.sourcefoge.net/cups/%{name}-%{version}.tar.gz
 URL:		http://sourceforge.net/projects/cups
 Requires:	cups >= 1.1.3
 BuildRequires:	qt-devel >= 2.1
+BuildRequires:	cups-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
