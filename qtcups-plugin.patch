@@ -1,0 +1,19 @@
+--- ./qtcups/main.cpp.org	Sun Sep  1 17:29:57 2002
++++ ./qtcups/main.cpp	Sun Sep  1 17:30:06 2002
+@@ -21,6 +21,7 @@
+ #include <stdlib.h>
+ #include <qmessagebox.h>
+ 
++#include <qlibrary.h>
+ #include <qwindowsstyle.h>
+ 
+ #include <cups/ipp.h>
+@@ -65,7 +66,7 @@
+   QApplication a(argc, argv);
+   a.setFont(QFont("helvetica", 12));
+   /* uncomment the following line, if you want a Windows 95 look*/
+-  a.setStyle(new QWindowsStyle);
++  QLibrary resolve( QWindowsStyle );
+ 
+ 	// install translation
+ 	QtCUPS::setLocale();
