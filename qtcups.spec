@@ -19,7 +19,6 @@ BuildRequires:	qt-devel >= 3.0.5
 BuildRequires:	cups-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_prefix		/usr/X11R6
 
 %description
 QtCups provides CUPS support for Qt applications. It includes:
