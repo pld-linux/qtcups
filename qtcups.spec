@@ -41,7 +41,7 @@ QtCups dostarcza obs³ugê CUPS dla aplikacji Qt. Zawiera:
   programów.
 
 %description -l pt_BR
-Uma interface gráfica baseada no QT para ser usada no lugar do lpr.
+Uma interface gráfica baseada no Qt para ser usada no lugar do lpr.
 
 %package devel
 Summary:	QtCUPS development files
