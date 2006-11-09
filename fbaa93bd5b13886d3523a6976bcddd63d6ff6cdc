@@ -1,0 +1,4 @@
+- release 2 - qt3 port patch added from RH
+- gcc296 fix (RH), noin18 fix locales (CNV), desktop and icon (MDK)
+- plugin patch - fix for non-static plugins
+  STBR
