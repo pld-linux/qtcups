@@ -15,9 +15,9 @@ Patch1:		%{name}-qt3.patch
 Patch2:		%{name}-plugin.patch
 Patch3:		%{name}-noi18n.patch
 URL:		http://sourceforge.net/projects/cups/
-Requires:	cups >= 1.1.3
-BuildRequires:	qt-devel >= 3.0.5
 BuildRequires:	cups-devel
+BuildRequires:	qt-devel >= 3.0.5
+Requires:	cups >= 1.1.3
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -48,13 +48,13 @@ Summary:	QtCUPS development files
 Summary(pl):	Pliki dla programistów QtCUPS
 Summary(pt_BR):	Fornece aplicações para Qt com suporte ao CUPS
 Group:		X11/Development/Libraries
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
 
 %description devel
 A development library which enables Qt application to print to CUPS
 and configure all CUPS printer options. The class QCupsPrinter
-provides the same interface as QPrinter, so code changes are small
-for most applications.
+provides the same interface as QPrinter, so code changes are small for
+most applications.
 
 %description devel -l pl
 Biblioteka umo¿liwiaj±ca aplikacji Qt drukowanie poprzez CUPS oraz
@@ -63,8 +63,9 @@ sam interfejs co QPrinter, wiêc niezbêdne zmiany w kodzie wiêkszo¶ci
 aplikacji s± niewielkie.
 
 %description devel -l pt_BR
-Bibliotecas de desenvolvimento que permite as aplicações baseadas no Qt
-imprimir pelo CUPS e configurar todas as opções das impressoras do CUPS.
+Bibliotecas de desenvolvimento que permite as aplicações baseadas no
+Qt imprimir pelo CUPS e configurar todas as opções das impressoras do
+CUPS.
 
 %prep
 %setup -q
