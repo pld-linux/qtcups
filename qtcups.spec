@@ -1,6 +1,6 @@
 Summary:	QtCUPS - a CUPS interface and library for Qt
-Summary(pl.UTF-8):   QtCUPS - interfejs do CUPS i biblioteka dla Qt
-Summary(pt_BR.UTF-8):   Cliente lpr grafico para desktops
+Summary(pl.UTF-8):	QtCUPS - interfejs do CUPS i biblioteka dla Qt
+Summary(pt_BR.UTF-8):	Cliente lpr grafico para desktops
 Name:		qtcups
 Version:	2.0
 Release:	2
@@ -45,8 +45,8 @@ Uma interface gráfica baseada no Qt para ser usada no lugar do lpr.
 
 %package devel
 Summary:	QtCUPS development files
-Summary(pl.UTF-8):   Pliki dla programistów QtCUPS
-Summary(pt_BR.UTF-8):   Fornece aplicações para Qt com suporte ao CUPS
+Summary(pl.UTF-8):	Pliki dla programistów QtCUPS
+Summary(pt_BR.UTF-8):	Fornece aplicações para Qt com suporte ao CUPS
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
