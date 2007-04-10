@@ -16,7 +16,7 @@ Patch2:		%{name}-plugin.patch
 Patch3:		%{name}-noi18n.patch
 URL:		http://sourceforge.net/projects/cups/
 BuildRequires:	cups-devel
-BuildRequires:	qt-devel >= 3.0.5
+BuildRequires:	qt-devel >= 3:3.0.5
 Requires:	cups >= 1.1.3
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
