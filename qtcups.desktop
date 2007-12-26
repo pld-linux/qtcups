@@ -1,12 +1,10 @@
 [Desktop Entry]
-Encoding=UTF-8
 Name=QTCups
 Name[pl]=QTCups
 Comment=
 Comment[pl]=
-Icon=qtcups.png
+Icon=qtcups
 Exec=qtcups
 Terminal=false
 Type=Application
-
 # vi: encoding=utf-8
